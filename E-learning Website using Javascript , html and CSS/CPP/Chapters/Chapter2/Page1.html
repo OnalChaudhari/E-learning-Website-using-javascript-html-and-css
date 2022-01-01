@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Arrays Functions and Strings</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+<body>
+<header>
+<div class="menu-bar">
+ <h1><font size="6">Arrays</font></h1>
+</div>
+<hr>
+</header>
+<br>
+<p><center><b><font size="6"> What is an Array? </font></b></center></p><br>
+<p>An array is a special variable, which can hold more than one value at a time.</p>
+<p>If you have a list of items (a list of car names, for example),storing the cars in single variables could look like this:</p>
+
+<p>var car1 = "Saab";</p>
+<p>var car2 = "Volvo";</p>
+<p>var car3 = "BMW";</p>
+<p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?</p>
+<p>The solution is an array!An array can hold many values under a single name, and you can access the values by referring to an index number.</p>
+<p><center><b><font size="6"> Creating an Array </font></b></center></p><br>
+
+<p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+<p>Syntax:</p>
+
+<p>var array_name = [item1, item2, ...]; </p>     
+<p>Example</p>
+<p>var cars = ["Saab", "Volvo", "BMW"];</p>
+<p>Spaces and line breaks are not important. A declaration can span multiple lines:</p>
+
+<p>Example:</p>
+<p>var cars = [</p> 
+ <p> "Saab",</p>
+ <p>"Volvo",</p>
+ <p>"BMW"</p>
+<p>];</p>
+<p>Putting a comma after the last element (like "BMW",) is inconsistent across browsers.</p>
+<p>IE 8 and earlier will fail.</p>
+
+<p>Using the JavaScript Keyword new.</p>
+<p>The following example also creates an Array, and assigns values to it:</p>
+
+<p>Example:</p>
+<p>var cars = new Array("Saab", "Volvo", "BMW");</p>
+<p>The two examples above do exactly the same. There is no need to use new Array().</p>
+<p>For simplicity, readability and execution speed, use the first one (the array literal method).</p>
+
+<p><center><b><font size="6"> Access the Elements of an Array </font></b></center></p><br>
+<p>You access an array element by referring to the index number.This statement accesses the value of the first element in cars:</p>
+
+<p>var name = cars[0];</p>
+<p>Example:</p>
+<p>var cars = ["Saab", "Volvo", "BMW"];</p>
+<p>document.getElementById("demo").innerHTML = cars[0];</p>
+<p>Note: Array indexes start with 0.</p>
+
+<p>[0] is the first element. [1] is the second element.</p>
+
+<p><center><b><font size="6"> Changing an Array Element </font></b></center></p><br>
+<p>This statement changes the value of the first element in cars:</p>
+
+<p>cars[0] = "Opel";</p>
+<p>Example</p>
+<p>var cars = ["Saab", "Volvo", "BMW"];</p>
+<p>cars[0] = "Opel";</p>
+<p>document.getElementById("demo").innerHTML = cars[0];</p>
+
+<p><center><b><font size="6"> Access the Full Array </font></b></center></p><br>
+<p>With JavaScript, the full array can be accessed by referring to the array name:</p>
+
+<p>Example</p>
+<p>var cars = ["Saab", "Volvo", "BMW"];</p>
+<p>document.getElementById("demo").innerHTML = cars;</p>
+<p>Arrays are Objects</p>
+<p>Arrays are a special type of objects. The typeof operator in JavaScript returns "object" for arrays.</p>
+
+<p>But, JavaScript arrays are best described as arrays.</p>
+
+<p>Arrays use numbers to access its "elements".</p> 
+<p>In this example, person[0] returns John:</p>
+
+<p>Array:</p>
+<p>var person = ["John", "Doe", 46];</p>
+<p>Objects use names to access its "members". </p>
+<p>In this example, person.firstName returns John:</p>
+
+<p>Object:</p>
+<p>var person = {firstName:"John", lastName:"Doe", age:46};</p>
+<p>Array Elements Can Be Objects
+<p>JavaScript variables can be objects. Arrays are special kinds of objects.</p>
+
+<p>Because of this, you can have variables of different types in the same Array.</p>
+
+<p>You can have objects in an Array. You can have functions in an Array.</p>
+ You can have arrays in an Array:</p>
+
+<p>myArray[0] = Date.now;</p>
+<p>myArray[1] = myFunction;</p>
+<p>myArray[2] = myCars;</p>
+<p><center><b><font size="6"> Array Properties and Methods </font></b></center></p><br>
+<p>The real strength of JavaScript arrays are the built-in array properties and methods:</p>
+
+<p>Examples</p>
+<p>var x = cars.length;   // The length property returns the number of elements</p>
+<p>var y = cars.sort();   // The sort() method sorts arrays</p>
+<p>Array methods are covered in the next chapters.</p>
+
+<p>The length Property</p>
+<p>The length property of an array returns the length of an array (the number of array elements).</p>
+<p>Example</p>
+<p>var fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+<p>fruits.length;   // the length of fruits is 4</p>
+<p>The length property is always one more than the highest array index.</p>
+
+<p>Accessing the First Array Element</p>
+<p>Example</p>
+<p>fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+<p>var first = fruits[0];</p>
+<p>Accessing the Last Array Element</p>
+<p>Example</p>
+<p>fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+<p>var last = fruits[fruits.length - 1];</p>
+<p>Looping Array Elements</p>
+<p>The safest way to loop through an array, is using a for loop:</p>
+
+<p>Example</p>
+<p>var fruits, text, fLen, i;</p>
+<p>fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+<p>fLen = fruits.length;</p>
+
+<p>text = "<ul>";</p>
+<p>for (i = 0; i < fLen; i++)</p>
+ <p>{</p>
+  text += "<li>" + fruits[i] + "</li>";</p>
+<p>}</p>
+<p>text += "</ul>";</p>
+<p>You can also use the Array.forEach() function:</p>
+
+<p>Example</p>
+<p>var fruits, text;</p>
+<p>fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+
+<p>text = "<ul>";</p>
+<p>fruits.forEach(myFunction);</p>
+<p>text += "</ul>";</p>
+
+<p>function myFunction(value) {</p>
+  <p>text += "<li>" + value + "</li>";</p>
+<p>}</p>
+<p><center><b><font size="6"> Adding Array Elements </font></b></center></p><br>
+<p>The easiest way to add a new element to an array is using the push() method:</p>
+
+<p>Example</p>
+<p>var fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+<p>fruits.push("Lemon");    // adds a new element (Lemon) to fruits</p>
+<p>New element can also be added to an array using the length property:</p>
+
+<p>Example</p>
+<p>var fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+<p>fruits[fruits.length] = "Lemon";    // adds a new element (Lemon) to fruits</p>
+<p>WARNING !</p>
+<p>Adding elements with high indexes can create undefined "holes" in an array:</p>
+
+<p>Example</p>
+<p>var fruits = ["Banana", "Orange", "Apple", "Mango"];</p>
+<p>fruits[6] = "Lemon";    // adds a new element (Lemon) to fruits</p>
+<p>Associative Arrays</p>
+<p>Many programming languages support arrays with named indexes.</p>
+
+<p>Arrays with named indexes are called associative arrays (or hashes).</p>
+
+<p>JavaScript does not support arrays with named indexes.</p>
+
+<p>In JavaScript, arrays always use numbered indexes. </p> 
+
+<p>Example</p>
+<p>var person = [];</p>
+<p>person[0] = "John";</p>
+<p>person[1] = "Doe";</p>
+<p>person[2] = 46;</p>
+<p>var x = person.length;     // person.length will return 3</p>
+<p>var y = person[0];         // person[0] will return "John"</p>
+<p>WARNING !!</p>
+<p>If you use named indexes, JavaScript will redefine the array to a standard object.</p>
+<p>After that, some array methods and properties will produce incorrect results.</p>
+
+<p> Example:</p>
+<p>var person = [];</p>
+<p>person["firstName"] = "John";</p>
+<p>person["lastName"] = "Doe";</p>
+<p>person["age"] = 46;</p>
+<p>var x = person.length;     // person.length will return 0</p>
+<p>var y = person[0];         // person[0] will return undefined</p>
+
+</div>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

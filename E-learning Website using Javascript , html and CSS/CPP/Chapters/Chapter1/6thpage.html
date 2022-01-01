@@ -1,0 +1,208 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Basics of JavaScript</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+
+
+<header>
+<div class="menu-bar">
+<center><h1>Loop Statements</h1></center>
+</div>
+</header>
+<br>
+
+<p>JavaScript supports different kinds of loops:</p>
+<p>1.for - loops through a block of code a number of times</p>
+<p>2.for/in - loops through the properties of an object</p>
+<p>3.for/of - loops through the values of an iterable object</p>
+<p>4.while - loops through a block of code while a specified condition is true</p>
+<p>5.do/while - also loops through a block of code while a specified condition is true</p>
+<p> <b>For Loop</b></p>
+<p><b>Syntax:</b></p>
+<xmp>
+for (initialization; test condition; increment/decrement operator)
+ {
+    //Statement 1
+    //Statement 2
+     ………
+    //Statement n
+ }
+</xmp>
+<p><b>Example:</b></p>
+<xmp>
+<!DOCTYPE html>
+<html>
+<head>
+    <title> JavaScript For Loop </title>
+</head>
+
+<body>
+    <h1> JavaScript For Loop </h1>
+<script>
+    var i, number = 10, total = 0;
+    for (i = 1; i <= number; i++)
+    {
+        total = total + i;
+    }
+    
+    document.write("<b>Sum of N Natural Numbers is </b>= " + total);  
+</script>
+</body>
+</html>
+</xmp>
+
+<p><b>For/In Loop</b></p>
+<p>The JavaScript for/in statement loops through the properties of an object:</p>
+<p>Example</p>
+<p>var person = {fname:"John", lname:"Doe", age:25};
+</p>
+<p>var text for (x in person) {= "";</p>
+<p>var x;</p>
+<p>text += person[x];</p>
+<p>}</p>
+<p>The The JavaScript for/of statement loops through the values of an iterable objects
+for/of lets you loop over data structures that are iterable such as Arrays, Strings, Maps, NodeLists, and more.
+/Of Loop<for (variable of iterable) {/p>
+<p>The for/of loop has the following syntax:</p>
+<p>for (variable of iterable) {(</p>
+<p>// code block to be executed</p>
+<p>}</p>
+<p><b>Looping over an Array</b></p>
+<p>Example</p>
+<p>var cars = ['BMW', 'Volvo', 'Mini'];</p>
+<p>var x;</p>
+<p>for (x of cars) {</p>
+<p>document.write(x + "<br >");</p>
+<p>}</p>
+<p><b>While Loop</b></p>
+<p>The while loop loops through a block of code as long as a specified condition is true.</p>
+
+<p><b>Syntax:</b></p>
+<xmp>
+While( Condition )
+ {
+   statement 1;
+   statement 2;
+    ………….
+ }
+It is the statement Outside the While Loop
+</xmp>
+<p><b>Example:</b></p>
+<xmp>
+<!DOCTYPE html>
+<html>
+<head>
+    <title> JavaScript While Loop </title>
+</head>
+
+<body>
+    <h1> JavaScript While Loop </h1>
+<script>
+    var number = 6, total=0;
+    while (number <= 10)
+    {
+        total = total + number;
+        number++;
+    }
+    document.write("Value of Total From the While Loop is = ", total);  
+</script>
+</body>
+</html>
+</xmp>
+
+<p><b>Do/While Loop</b></p>
+<p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+<p><b>Syntax:</b></p>
+<xmp>
+do
+{
+  statement 1;
+  statement 2;
+    ………….
+  statement n;
+}
+While (condition);
+</xmp>
+<p><b>Example:</b></p>
+<xmp>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> JavaScript Do While Loop </title>
+</head>
+
+<body>
+    <h1> JavaScript Do While </h1>
+<script>
+    var number = 6, total=0;
+    do
+    {
+        total = total + number;
+        document.write("<br\>Number = " + number);
+        document.write("<br\>Total Value is = " + total);
+        number++;
+    }while (number <= 10);
+    
+    document.write("<br\>Total Value from outside the Loop is = ", total);  
+</script>
+</body>
+</html>
+</xmp>
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

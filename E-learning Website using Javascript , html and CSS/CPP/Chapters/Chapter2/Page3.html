@@ -1,0 +1,411 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Arrays Functions and Strings</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+
+
+<header>
+<div class="menu-bar">
+<center><h1> Strings </h1></center>
+</div>
+</header>
+<br>
+<p>The <b>String</b> object lets you work with a series of characters; it wraps Javascript's string primitive data type with a number of helper methods.</p>
+<p>As JavaScript automatically converts between string primitives and String objects, you can call any of the helper methods of the String object on a string primitive.</p>
+<h3>Syntax</h3>
+<p>Use the following syntax to create a String object &minus;</p>
+<pre class="result notranslate">
+var val = new String(string);
+</pre>
+<p>The <b>String</b> parameter is a series of characters that has been properly encoded.</p>
+<h3>String  Properties</h3>
+<p>Here is a list of the properties of String object and their description.</p>
+<table border="1" cellspacing="0">
+<tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Property &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><b>constructor</b>
+<p>Returns a reference to the String function that created the object.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><b>length</b>
+<p>Returns the length of the string.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><b>prototype</b>
+<p>The prototype property allows you to add properties and methods to an object.</p></td>
+</tr>
+</table>
+<p>In the following sections, we will have a few examples to demonstrate the usage of String properties.</p>
+<h3>String  Methods</h3>
+<p>Here is a list of the methods available in String object along with their description.</p>
+<table border="1" cellspacing="0">
+<tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Method &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><b>charAt()</b>
+<p>Returns the character at the specified index.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><b>charCodeAt()</b>
+<p>Returns a number indicating the Unicode value of the character at the given index.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><b>concat()</b>
+<p>Combines the text of two strings and returns a new string.</p></td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><b>indexOf()</b>
+<p>Returns the index within the calling String object of the first occurrence of the specified value, or -1 if not found.</p></td>
+</tr>
+<tr>
+<td class="ts">5</td>
+<td><b>lastIndexOf()</b>
+<p>Returns the index within the calling String object of the last occurrence of the specified value, or -1 if not found.</p></td>
+</tr>
+<tr>
+<td class="ts">6</td>
+<td><b>localeCompare()</b>
+<p>Returns a number indicating whether a reference string comes before or after or is the same as the given string in sort order.</p></td>
+</tr>
+<tr>
+<td class="ts">7</td>
+<td><b>match()</b>
+<p>Used to match a regular expression against a string.</p></td>
+</tr>
+<tr>
+<td class="ts">8</td>
+<td><b>replace()</b>
+<p>Used to find a match between a regular expression and a string, and to replace the matched substring with a new substring.</p></td>
+</tr>
+<tr>
+<td class="ts">9</td>
+<td><b>search()</b>
+<p>Executes the search for a match between a regular expression and a specified string.</p></td>
+</tr>
+<tr>
+<td class="ts">10</td>
+<td><b>slice()</b>
+<p>Extracts a section of a string and returns a new string.</p></td>
+</tr>
+<tr>
+<td class="ts">11</td>
+<td><b>split()</b>
+<p>Splits a String object into an array of strings by separating the string into substrings.</p></td>
+</tr>
+<tr>
+<td class="ts">12</td>
+<td><b>substr()</b>
+<p>Returns the characters in a string beginning at the specified location through the specified number of characters.</p></td>
+</tr>
+<tr>
+<td class="ts">13</td>
+<td><b>substring()</b>
+<p>Returns the characters in a string between two indexes into the string.</p></td>
+</tr>
+<tr>
+<td class="ts">14</td>
+<td><b>toLocaleLowerCase()</b>
+<p>The characters within a string are converted to lower case while respecting the current locale.</p></td>
+</tr>
+<tr>
+<td class="ts">15</td>
+<td><b>toLocaleUpperCase()</b>
+<p>The characters within a string are converted to upper case while respecting the current locale.</p></td>
+</tr>
+<tr>
+<td class="ts">16</td>
+<td><b>toLowerCase()</b>
+<p>Returns the calling string value converted to lower case.</p></td>
+</tr>
+<tr>
+<td class="ts">17</td>
+<td><b>toString()</b>
+<p>Returns a string representing the specified object.</p></td>
+</tr>
+<tr>
+<td class="ts">18</td>
+<td><b>toUpperCase()</b>
+<p>Returns the calling string value converted to uppercase.</p></td>
+</tr>
+<tr>
+<td class="ts">19</td>
+<td><b>valueOf()</b>
+<p>Returns the primitive value of the specified object.</p></td>
+</tr>
+</table>
+<h3>String HTML Wrappers</h3>
+<p>Here is a list of the methods that return a copy of the string wrapped inside an appropriate HTML tag.</p>
+<table border="1" cellspacing="0">
+<tr>
+<th style="text-align:center;">Sr.No.</th>
+<th style="text-align:center;">Method &amp; Description</th>
+</tr>
+<tr>
+<td class="ts">1</td>
+<td><b>anchor()</b>
+<p>Creates an HTML anchor that is used as a hypertext target.</p></td>
+</tr>
+<tr>
+<td class="ts">2</td>
+<td><b>big()</b>
+<p>Creates a string to be displayed in a big font as if it were in a &lt;big&gt; tag.</p></td>
+</tr>
+<tr>
+<td class="ts">3</td>
+<td><b>blink()</b>
+<p>Creates a string to blink as if it were in a &lt;blink&gt; tag.</p></td>
+</tr>
+<tr>
+<td class="ts">4</td>
+<td><b>bold()</b>
+<p>Creates a string to be displayed as bold as if it were in a &lt;b&gt; tag.</p></td>
+</tr>
+<tr>
+<td class="ts">5</td>
+<td><b>fixed()</b>
+<p>Causes a string to be displayed in fixed-pitch font as if it were in a &lt;tt&gt; tag</p></td>
+</tr>
+<tr>
+<td class="ts">6</td>
+<td><b>fontcolor()</b>
+<p>Causes a string to be displayed in the specified color as if it were in a &lt;font color="color"&gt; tag.</p></td>
+</tr>
+<tr>
+<td class="ts">7</td>
+<td><b>fontsize()</b>
+<p>Causes a string to be displayed in the specified font size as if it were in a &lt;font size="size"&gt; tag.</p></td>
+</tr>
+<tr>
+<td class="ts">8</td>
+<td><b>italics()</b>
+<p>Causes a string to be italic, as if it were in an &lt;i&gt; tag.</p></td>
+</tr>
+<tr>
+<td class="ts">9</td>
+<td><b>link()</b>
+<p>Creates an HTML hypertext link that requests another URL.</p></td>
+</tr>
+<tr>
+<td class="ts">10</td>
+<td><b>small()</b>
+<p>Causes a string to be displayed in a small font, as if it were in a &lt;small&gt; tag.</p></td>
+</tr>
+<tr>
+<td class="ts">11</td>
+<td><b>strike()</b>
+<p>Causes a string to be displayed as struck-out text, as if it were in a &lt;strike&gt; tag.</p></td>
+</tr>
+<tr>
+<td class="ts">12</td>
+<td><b>sub()</b>
+<p>Causes a string to be displayed as a subscript, as if it were in a &lt;sub&gt; tag</p></td>
+</tr> 
+<tr>
+<td class="ts">13</td>
+<td><b>sup()</b>
+<p>Causes a string to be displayed as a superscript, as if it were in a &lt;sup&gt; tag</p></td>
+</tr>
+</table>
+
+<p><h3> Examples of the JavaScript string functions </h3></p>
+
+<p><b>1. charAt(x)</b></p>
+<xmp>
+//charAt(x)
+var myString = 'jQuery FTW!!!';
+console.log(myString.charAt(7));
+//output: F
+</xmp>
+<p><b>2. charCodeAt(x)</b></p>
+<xmp>
+//charAt(position)
+var message="jquery4u"
+//alerts "q"
+alert(message.charAt(1))
+</xmp>
+<p><b>3. concat(v1, v2,…)</b></p>
+<xmp>
+//concat(v1, v2,..)
+var message="Sam"
+var final=message.concat(" is a"," hopeless romantic.")
+//alerts "Sam is a hopeless romantic."
+alert(final)
+</xmp>
+<p><b>4. fromCharCode(c1, c2,…)</b></p>
+<xmp>
+//fromCharCode(c1, c2,...)
+console.log(String.fromCharCode(97,98,99,120,121,122))
+//output: abcxyz
+console.log(String.fromCharCode(72,69,76,76,79))
+//output: HELLO
+</xmp>
+<p><b>5. indexOf(substr, [start])</b></p>
+<xmp>
+//indexOf(char/substring)
+var sentence="Hi, my name is Annabella!"
+if (sentence.indexOf("Annabella")!=-1)
+alert("Annabella is in there!")
+</xmp>
+<p><b>6. lastIndexOf(substr, [start])</b></p>
+<xmp>
+//lastIndexOf(substr, [start])
+var myString = 'javascript rox';
+console.log(myString.lastIndexOf('r'));
+//output: 11
+</xmp>
+<p><b>7. match(regexp)</b></p>
+<xmp>
+//match(regexp) //select integers only
+var intRegex = /[0-9 -()+]+$/;  
+
+var myNumber = '999';
+var myInt = myNumber.match(intRegex);
+console.log(isInt);
+//output: 999
+
+var myString = '999 JS Coders';
+var myInt = myString.match(intRegex);
+console.log(isInt);
+//output: null
+</xmp>
+<p><b>8. replace(regexp/substr, replacetext)</b></p>
+<xmp>
+//replace(substr, replacetext)
+var myString = '999 JavaScript Coders';
+console.log(myString.replace(/JavaScript/i, "jQuery"));
+//output: 999 jQuery Coders
+
+//replace(regexp, replacetext)
+var myString = '999 JavaScript Coders';
+console.log(myString.replace(new RegExp( "999", "gi" ), "The"));
+//output: The JavaScript Coders
+</xmp>
+<p><b>9. search(regexp)</b></p>
+<xmp>
+//search(regexp)
+var intRegex = /[0-9 -()+]+$/;  
+
+var myNumber = '999';
+var isInt = myNumber.search(intRegex);
+console.log(isInt);
+//output: 0
+
+var myString = '999 JS Coders';
+var isInt = myString.search(intRegex);
+console.log(isInt);
+//output: -1
+</xmp>
+<p><b>10. slice(start, [end])</b></p>
+<xmp>
+//slice(start, end)
+var text="excellent"
+text.slice(0,4) //returns "exce"
+text.slice(2,4) //returns "ce"
+</xmp>
+<p><b>11. split(delimiter, [limit])</b></p>
+<xmp>
+//split(delimiter)
+var message="Welcome to jQuery4u"
+//word[0] contains "We"
+//word[1] contains "lcome to jQuery4u"
+var word=message.split("l")
+</xmp>
+<p><b>12. substr(start, [length])</b></p>
+<xmp>
+//substring(from, to)
+var text="excellent"
+text.substring(0,4) //returns "exce"
+text.substring(2,4) //returns "ce"
+</xmp>
+<p><b>13. substring(from, [to])</b></p>
+<xmp>
+//substring(from, [to])
+var myString = 'javascript rox';
+myString = myString.substring(0,10);
+console.log(myString)
+//output: javascript
+</xmp>
+<p><b>14. toLowerCase()</b></p>
+<xmp>
+//toLowerCase()
+var myString = 'JAVASCRIPT ROX';
+myString = myString.toLowerCase();
+console.log(myString)
+//output: javascript rox
+</xmp>
+<p><b>15. toUpperCase() </b></p>
+<xmp>
+//toUpperCase()
+var myString = 'javascript rox';
+myString = myString.toUpperCase();
+console.log(myString)
+//output: JAVASCRIPT ROX
+</xmp>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Event Handling</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+
+
+<header>
+<div class="menu-bar">
+<center><h1>Evaluating Checkbox Selections</h1></center>
+</div>
+</header>
+<br>
+<p>A checkbox is a GUI widget that permits the user to make a binary choice, i.e. a choice between one of two possible mutually exclusive options</p>
+<p>The<xmp>input type="checkbox"></xmp> defines a checkbox.</p>
+<p>The checkbox is shown as a square box that is ticked (checked) when activated.</p>
+<p>Checkboxes are used to let a user select one or more options of a limited number of choices.</p>
+<p><b>Syntax</b></p>
+<p><xmp><input type="checkbox"></xmp></p>
+<p>A checkbox (check box, tickbox, tick box) is a GUI widget that permits the user to make a binary choice, i.e. a choice between one of two possible mutually exclusive options.</p> 
+<p>For example, the user may have to answer 'yes' (checked) or 'no' (not checked) on a simple yes/no question.</p>
+<xmp>
+<html>
+	<head>
+		<title>HTML Form</title>
+			<script language="Javascript" type="text/javascript">
+			fucntion selection(){
+				var x="You selected: ";
+				with (document.forms.myform){
+				if (a.checked==true)
+					x+=a.value+" ";
+				if(b.checked==true
+				x+=b.value+" ";
+				if (o.checked==true)
+                 x+=o.value+" ";
+				 if(p.checked==true)
+				 x+=p.value+" ";
+				 if(g.checked==true)
+				 x+=g.value+" ";
+			}
+			 document.write(x);
+			}
+			</script>
+	</head>
+<body>
+	<form name="myform" action="" method="post">
+		Select your favourite Fruits:<br>
+		<input type="checkbox" name="a" value="apple">Apple
+		<input type="checkbox" name="b" value="apple">Banana
+		<input type="checkbox" name="o" value="apple">Orange
+		<input type="checkbox" name="p" value="apple">Pears
+		<input type="checkbox" name="g" value="apple">Grapes
+		<input type="reset" value="Show" onclick="selection()">
+	</form>
+</body>
+</html>
+</xmp>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

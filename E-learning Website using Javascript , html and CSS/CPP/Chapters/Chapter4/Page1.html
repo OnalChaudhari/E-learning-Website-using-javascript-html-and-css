@@ -1,0 +1,156 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Cookies and Browser Data</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+
+
+<header>
+<div class="menu-bar">
+<center><h1>Cookies</h1></center>
+</div>
+</header>
+<br>
+<p><center><b><h2>What is a Cookie</h2></b></center></p><br>
+        <h3>A cookie small amount of named data stored by the web browserand associated with perticular web page or website. </h3>
+        
+        <p>Cookie serve to give web browser a memory so that script can use data that was input on one page and anather page, or so browser can recall user prefrance and other state variable when userf lleave page and then return. </p>
+        
+        <p>Cookie are still one of easiest, simplest and most widely udes persistent storage technique for web page today. they are easy to set safe well understood by most people who brows web pages.and require little overhade.</p>
+        <p>Cookies are small items of data, each consisting of a name and a value, stored on behalf of a website by visitors web browsers. In JavaScript, cookies can be accessed through the document.cookie object, but the interface provided by this object is very primitive. Cookies.js is a JavaScript object that allows cookies to be created, retrieved, and deleted through a simple and intuitive interface</p>
+        
+        <p><center><b><h2>Basics of cookie</h2></b></center></p>
+        <p>cookie arfe usually small text files, given ID tag that are stored on your computer's browser directory or program sub folder.</p>
+        
+        <p>Cookie are created when you use your browser to visit a browser that use cookie to keep track of your movment within the site, help you to resume form where you left off, remember your registerd login, theme selection and other function.</p>
+        
+         <p><center><b><h2>Types of cookie</h2></b></center></p>
+        
+        <p><b>Session Cookies:</b>are created temparay on your browser's subfolder while visiting the website. Once you leave the website, the session cooke will gwt deleted.</p>
+        <p><b>Persistent Cookies:</b>files remain in your browser's subfolder and activated again once you visitthat createdd that perticular cookie. A persistant cookie remains in browsers subfolderfor duration period set within cookie's file.</p>
+        
+        <p><b><h3>Advantages of cookie</h3></b>
+            1. Simplest technique to maintain state<br>
+            2. Cookie are maintaind at client side</p>
+       
+	   <p><b><h3>disadvantages of cookie</h3></b>    
+            1. It will not work if cookie is disabled from the web browser<br>
+            2. only textual information can be set in cookie object</p>
+    
+        <p><center><h2>How cookie works?</h2></center></p>
+        <p>1. By default each request is considerd as new request. In cookie technique we add cookie with response servlet. So cookie is stored in cache of of the browser<br>
+            2. After that if requst is sent by usefr, cookie is added with request by default.
+        </p>
+        
+        <p><center><h2> Creating a Cookie</h2></center></p>
+        <p> A cookie is nothing but small text file that is store in your browser<br>
+        it contains :<br>
+                        1. A name value pair cointaining actual data<br>
+                     2. An expairy date<br>
+                     3. The domain and path </p>
+        <p>cookie are store in name value pair like: <b><br>name = gpj;</b></p>
+        <p>Every cookie has four main part: name, assignment operator, a value,and a semicolon</p>
+        <p>creating cookie is simple. You simply need to assign cookie to <b>window.document.cookie</b> object  </p>
+        
+        <p><b> Cookies can be created using the set function, which takes the cookie name and value as parameters</b>:
+        <br>// create a cookie<br>
+            Cookies.set('theme', 'green');<br></p>
+
+        <p> <h3>JavaScript can create cookie with document.cookie proporety</h3> 
+        <p>If you set  a new cookie to older cookies are not overriten .<br> The new cookie are added to document.cookie on reading you get like <b>cookie1=value; cookie2=value;</b></p>
+     
+        <p><center><h2> Reading Cookie</h2></center></p>
+        <p>we can use <b> document.cookie</b> proporety whenever we want to access the cookie. With JavaScript, cookie can be read like this:<br><b>var x= document.cookie;</b></p> 
+        
+        <p>The value of a cookie can be retrieved using the get function, which takes the cookie name as a parameter:<br><br>
+
+            // retrieve the value of the theme cookie<br>
+            var theme =  Cookies.get('theme');<br>
+            
+<br><p>If there is no cookie with the specified name, the value undefined is returned. There may be more than one cookie with the same name if they were set for different paths or subdomains. In this case the get function returns the most specific cookie (the one set for the longest path). Passing true as a second parameter to the get function will cause it to return an array containing the values of all cookies with the specified name, in order of specificity:</p><br><br>
+
+
+            // retrieve the values of any theme cookies<br>
+            var themes =  Cookies.get('theme', true);<br>
+
+</p>
+        
+         <p><center><h2> Deleting a Cookie</h2></center></p>
+        <p>deleting a cookie is very simple. Just set <b>expires</b> parameter to pased date like :<br><b>document.cookie="username=; expires= Wed, 01 Jan 2020 00:00:00 GMT";</b> <br>
+        note that you dont have to cookie value when you delete cookie. </p>
+        <p>The expiry property allows the cookie can be given an expiry date. Cookies with an expiry date will persist between browsing sessions, and only be deleted when the expiry date is reached or the visitor instructs the browser to do so. The value of the property can be either a date on which the cookie will expire or a number of seconds after which the cookie should expire:<br><br>
+
+
+           // create a cookie that expires after one hour<br>
+            Cookies.set('theme', 'green', {expiry : 3600});<br><br>
+
+            // create a cookie that expires on 1st January 2030<br>
+               Cookies.set('name', 'Kate Morley', {expiry : new Date(2030, 0, 1)});<br>
+        </p>
+        
+         <p><center><h2>Setting expiration date of cookie</h2></center></p>
+        <p>you can extend life of cookie beyond currentcurrent browser session by setting expiration and saving expiration date with cookie.<br>
+        By default cookie is deleted when  browser is closed.<br>
+            The expiration dateis typically an increment of current date.<b>Javascript can create,read and delete cookie by document.cooke property</b><br>
+            
+        </p>
+        <h4>document.cookie="username= john; expires =Thu, 01 Jan 2020 00:00:00 GMT"</h4>
+        
+        
+
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

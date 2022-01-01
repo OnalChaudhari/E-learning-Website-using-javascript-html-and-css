@@ -1,0 +1,317 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Basics of JavaScript</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+
+
+<header>
+<div class="menu-bar">
+<center><h1>Operator</h1></center>
+</div>
+</header>
+<br>
+<p>JavaScript supports the following types of operators:</p>
+<p>•Arithmetic Operators</p>
+<p>•Comparison Operators</p>
+<p>•Logical (or Relational) Operators</p>
+<p>•Assignment Operators</p>
+<p>•Conditional (or ternary) Operators</p>
+<p><b>Arithmetic Operators</b></p>
+<p><b>+ (Addition)</b></p>
+<p>Adds two operands</p>
+<p>Ex: A + B will give 30</p>
+<p><b>- (Subtraction)</b></p>
+<p>Subtracts the second operand from the first</p>
+<p>Ex: A - B will give -10</p>
+<p><b>* (Multiplication)</b></p>
+<p> Multiply both operands.</p>
+<p>Ex: A * B will give 200</p>
+<p><b>/ (Division)</b></p>
+<p>Divide the numerator by the denominator</p>
+<p>Ex: B / A will give 2</p>
+<p><b>% (Modulus)</b></p>
+<p>Outputs the remainder of an integer division</p>
+<p>Ex: B % A will give 0</p>
+<p><b>++ (Increment)</b></p>
+<p>Increases an integer value by one</p>
+<p>Ex: A++ will give 11</p>
+<p><b> -- (Decrement)</b></p>
+<p>Decreases an integer value by one</p>
+<p>Ex: A-- will give 9</p>
+<p><b>Example:</b></p>
+<xmp>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Arithmetic Operators</title>
+</head>
+<body>
+    <h1>Performing Arithmetic Operations </h1>
+<script>
+   var a = 12, b = 3;
+   var addition, subtraction, multiplication, division, modulus;
+
+   addition = a + b; //addition of 3 and 12
+   subtraction = a - b; //subtract 3 from 12
+   multiplication = a * b; //Multiplying both
+   division = a / b; //dividing 12 by 3 (number of times)
+   modulus = a % b; //calculation the remainder
+
+   document.write("Addition of " + a +' and ' + b +" is = " + addition + "<br />");
+   document.write("Subtraction of " + a +' and ' + b +" is = " + subtraction + "<br />");
+   document.write("Multiplication of " + a +' and ' + b +" is = " + multiplication + "<br />");
+   document.write("Division of " + a +' and ' + b +" is = " + division + "<br />");
+   document.write("Modulus of " + a +' and ' + b +" is = " + modulus + "<br />");
+</script>
+</body>
+</html>
+</xmp>
+<p><b>Comparison Operators</b></p>
+<p><b>== (Equal)</b></p>
+<p>Checks if the value of two operands are equal or not, if yes, then the condition becomes true.</p>
+<p>Ex: (A == B) is not true.</p>
+<p><b>!= (Not Equal)</b></p>
+<p>Checks if the value of two operands are equal or not, if the values are not equal, then the condition becomes true.</p>
+<p>Ex: (A != B) is true</p>
+<p><b>> (Greater than)</b></p>
+<p>Checks if the value of the left operand is greater than the value of the right operand, if yes, then the condition becomes true.</p>
+<p>Ex: (A > B) is not true.</p>
+<p><b>< (Less than)</b></p>
+<p>Checks if the value of the left operand is less than the value of the right operand, if yes, then the condition becomes true.</p>
+<p>Ex: (A < B) is true.</p>
+<p><b>>= (Greater than or Equal to)</b></p>
+<p>Checks if the value of the left operand is greater than or equal to the value of the right operand, if yes, then the condition becomes true.</p>
+<p>Ex: (A >= B) is not true.</p>
+<p><b> <= (Less than or Equal to)</b></p>
+<p>Checks if the value of the left operand is less than or equal to the value of the right operand, if yes, then the condition becomes true.</p>
+<p>Ex: (A <= B) is true.</p>
+<p><b>Example:</b></p>
+<xmp>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Comparison Operators </title>
+</head>
+<body>
+    <h1>Performing Comparison Operations </h1>
+<script>
+   var a = 12, b = 4;
+
+   document.write("Result of " + a +" Greater than " + b +" is = " + (a > b) + "<br />");
+   document.write("Result of " + a +' Greater than or Equal to ' + b +" is = " + (a >= b) + "<br />");
+   document.write("Result of " + a +' Less than or Equal to ' + b +" is = " + (a <= b) + "<br />");
+   document.write("Result of " + a +' Less than ' + b +" is = " + (a < b) + "<br />");
+   document.write("Result of " + a +' Equal to ' + b +" is = " + (a ==b ) + "<br />");
+   document.write("Result of " + a +' Not Equal to ' + b +" is = " + (a !=b ) + "<br />");   
+</script>
+</body>
+</html>
+
+</xmp>
+<p><b>Logical Operators</b></p>
+<p><b>&& (Logical AND)</b></p>
+<p>If both the operands are non-zero, then the condition becomes true.</p>
+<p>Ex: (A && B) is true.</p>
+<p><b> || (Logical OR)</b></p>
+<p>If any of the two operands are non-zero, then the condition becomes true.</p>
+<p>Ex: (A || B) is true.</p>
+<p><b>! (Logical NOT)</b></p>
+<p>Reverses the logical state of its operand. If a condition is true, then the logical NOT operator will make it false.</p>
+<p>Ex: ! (A && B) is false.</p>
+
+
+<p><b>Bitwise Operators</b></p>
+<p><b>& (Bitwise AND)</b></p>
+<p>It performs a Boolean AND operation on each bit of its integer arguments.</p>
+<p>Ex: (A & B) is 2.</p>
+<p><b> | (BitWise OR)</b></p>
+<p>It performs a Boolean OR operation on each bit of its integer arguments.</p>
+<p>Ex: (A | B) is 3.</p>
+<p><b> 	^ (Bitwise XOR)</b></p>
+</p>It performs a Boolean exclusive OR operation on each bit of its integer arguments. Exclusive OR means that either operand one is true or operand two is true, but not both.</p>
+<p>Ex: (A ^ B) is 1.</p>
+<p><b> << (Left Shift)</b></p>
+<p>It moves all the bits in its first operand to the left by the number of places specified in the second operand. New bits are filled with zeros. Shifting a value left by one position is equivalent to multiplying it by 2, shifting two positions is equivalent to multiplying by 4, and so on.</p>
+<p>Ex: (A << 1) is 4.</p>
+<p><b>>> (Right Shift)</b></p>
+<p>Binary Right Shift Operator. The left operand’s value is moved right by the number of bits specified by the right operand.</p>
+<p>Ex: (A >> 1) is 1.</p>
+<p><b> >>> (Right shift with Zero)</b></p>
+<p>This operator is just like the >> operator, except that the bits shifted in on the left are always zero.</p>
+<p>Ex: (A >>> 1) is 1.</p>
+<p><b>Example:</b></p>
+<xmp>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> JavaScript Bitwise Operators </title>
+</head>
+
+<body>
+    <h1> JavaScript Bitwise Operators </h1>
+<script>
+    var a = 9, b = 65;
+    
+    document.write("Bitwise AND Operator a & b =  " + (a & b));
+    document.write("<br \> Bitwise OR Operator a | b =  " + (a | b));
+    document.write("<br \> Bitwise EXCLUSIVE OR Operator a ^ b =  " + (a ^ b));
+    document.write("<br \> Bitwise NOT Operator ~a =  " + (~a));
+    
+    document.write("<br \> LEFT SHIFT Operator a << 1 =  " + (a << 1));
+    document.write("<br \> RIGHT SHIFT Operator b >> 1 =  " + (b >> 1));
+ </script>
+</body>
+</html>
+</xmp>
+
+<p><b>Assignment Operators</b></p>
+<p><b>= (Simple Assignment )</b></p>
+<p>Assigns values from the right side operand to the left side operand.</p>
+<p>Ex: C = A + B will assign the value of A + B into C</p>
+<p><b>+= (Add and Assignment)</b></p>
+<p>It adds the right operand to the left operand and assigns the result to the left operand.</p>
+<p>Ex: C += A is equivalent to C = C + A</p>
+<p><b>-= (Subtract and Assignment)</b></p>
+<p>It subtracts the right operand from the left operand and assigns the result to the left operand.</p>
+<p>Ex: C -= A is equivalent to C = C – A</p>
+<p><b>*= (Multiply and Assignment)</b></p>
+<p>It multiplies the right operand with the left operand and assigns the result to the left operand.</p>
+<p>Ex: C *= A is equivalent to C = C * A</p>
+<p><b>/= (Divide and Assignment)</b></p>
+<p>It divides the left operand with the right operand and assigns the result to the left operand.</p>
+<p>Ex: C /= A is equivalent to C = C / A</p>
+<p><b>%= (Modules and Assignment)</b></p>
+<p>It takes modulus using two operands and assigns the result to the left operand.</p>
+<p>Ex: C %= A is equivalent to C = C % A</p>
+<p><b>Example:</b></p>
+<xmp>
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Javascript Assignment Operators</title>
+</head>
+<body>
+    <h1> Assignment Operations </h1>
+<script>
+   var a = 7, Total = 21;
+
+   document.write("Value of the Total = " + (Total += a) + "<br />");
+   document.write("Value of the Total = " + (Total -= a) + "<br />");
+   document.write("Value of the Total = " + (Total *= a) + "<br />");   
+   document.write("Value of the Total = " + (Total /= a) + "<br />");
+   document.write("Value of the Total = " + (Total %= a) + "<br />");
+</script>
+</body>
+</html>
+</xmp>
+
+<p><b>Conditional Operators</b></p>
+<p><b>? : (Conditional)</b></p>
+<p>If Condition is true? Then value X : Otherwise value Y</p>
+
+<p><b>Example:</b></p>
+<xmp>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> JavaScript Conditional Operator </title>
+</head>
+
+<body>
+<script>
+  var age = prompt("Please Enter your age here:", "21");
+  (age >= 18) ? document.write("<b>You are eligible to Vote </b> "):
+                document.write("<b>You are not eligible to Vote</b> ");
+</script>
+</body>
+</html>
+</xmp>
+
+<p><b>typeof</b></p>
+<p> The typeof operator is a unary operator that is placed before its single operand, which can be of any type. Its value is a string indicating the data type of the operand.
+The typeof operator evaluates to "number", "string", or "boolean" if its operand is a number, string, or boolean value and returns true or false based on the evaluation.
+Here is a list of the return values for the typeof Operator.</p>
+<p><b>Example:</b></p>
+<xmp>
+Live Demo
+<html>
+   <body>      
+      <script type = "text/javascript">
+         <!--
+            var a = 10;
+            var b = "String";
+            var linebreak = "<br />";
+         
+            result = (typeof b == "string" ? "B is String" : "B is Numeric");
+            document.write("Result => ");
+            document.write(result);
+            document.write(linebreak);
+         
+            result = (typeof a == "string" ? "A is String" : "A is Numeric");
+            document.write("Result => ");
+            document.write(result);
+            document.write(linebreak);
+         //-->
+      </script>      
+      <p>Set the variables to different values and different operators and then try...</p>
+   </body>
+</html>
+</xmp>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

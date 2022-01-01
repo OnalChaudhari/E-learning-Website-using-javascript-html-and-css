@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>www.JSTutorials.com</title>
+		<link rel = "stylesheet" type ="text/css" href = "H:\CPP\stylesheets\cstyle.css">
+	</head>
+	<body>
+		<div class = "container">
+			<div class = "column active">
+				<div class = "content" onclick="openPage('H:/CPP/Chapter-Pages/chapter1.html')">
+					<h1>1</h1>
+						<div class = "box">
+						<br>
+							<h2>Basics of javascript</h2>
+							<br>
+							<p>Features,Object name ,
+							Property ,
+							Method,
+							Dot syntax,
+							Main event,Values& Variables ,Operators & Expression,If Stataments, Switch..Case Statements,Loop Statement, Property Getters & Setters
+							</p>
+						</div>
+				</div>	
+				<div class = "bg bg1">
+				</div>
+		    </div>
+			
+			<div class = "column">
+				<div class = "content" onclick="openPage('H:/CPP/Chapter-Pages/chapter2.html')">
+			
+					<h1>2</h1>
+						<div class = "box">
+							<br>
+							<h2>Array , Function and Strings</h2>
+							<br>
+							<p>Array, </p>
+							 <p>  Function,</p>
+							 <p>  Strings</p>
+								<br>
+						</div>
+				</div>	
+				<div class = "bg bg2">
+				</div>
+		    </div>
+			
+			<div class = "column">
+				<div class = "content" onclick="openPage('H:/CPP/Chapter-Pages/chapter3.html')">
+				
+					<h1>3</h1>
+						<div class = "box">
+							<br><br>
+							<h2>Form and Event Handling</h2>
+							<br>
+							<p>Form, Form Events, Form Object & Elements, Manipulating Form Elements,Intrinsic Javascript Functions  
+							</p>
+								<br>
+						</div>
+				</div>	
+				<div class = "bg bg3">
+				</div>
+		    </div>
+			
+			<div class = "column">
+				<div class = "content" onclick="openPage('H:/CPP/Chapter-Pages/chapter4.html')">
+					<h1>4</h1>
+						<div class = "box">
+							<br><br>
+							<h2>Cookies & Browser data</h2>
+							<br>
+							<p>Cookies,</p>
+							 <p> Browser</p>
+							 	<br> 	<br>
+						</div>
+				</div>	
+				<div class = "bg bg4">
+				</div>
+		    </div>
+			
+			<div class = "column">
+				<div class = "content" onclick="openPage('H:/CPP/Chapter-Pages/chapter5.html')">
+					<h1>5</h1>
+						<div class = "box">
+							<br><br>
+							<h2>RegExp, Rollover & Frames</h2>
+							<br>
+							<p>Regular Expresssion,</p>
+							<p>Frames,Rollover</p>
+						<br><br>	
+						</div>
+				</div>	
+				<div class = "bg bg5">
+				</div>
+		    </div>
+			</div>
+		<script src = "https://code.jquery.com/jquery-3.3.1.js"></script>
+		<script type = "text/javascript">
+			$(document).on('mouseover','.container .column',function(){
+			$(this).addClass('active').siblings().removeClass('active')
+			})
+		</script>
+        <script>
+		  function openPage(pageUrl){
+       window.open(pageUrl);
+     }
+         </script>		
+	</body>	
+</html>

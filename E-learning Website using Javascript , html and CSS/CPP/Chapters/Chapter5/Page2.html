@@ -1,0 +1,218 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Regular Expression and Frames</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+
+
+<header>
+<div class="menu-bar">
+<center><h1>Frames</h1></center>
+</div>
+</header>
+<br>
+<h1>Window <span class="color_h1">frames</span> Property</h1>
+        <p><b> Window Object</b></p>
+        <p>Using JavaScript Objects for Frames
+When a window contains multiple frames, each frame is represented in JavaScript by a frame object. This object is equivalent to a window object, but it is used for dealing with that frame. The frame object's name is the same as the NAME attribute you give it in the <frame> tag</p>
+        <p><b>The Difference Between Frames and Iframes</b></p>
+<p>When you use frameset you split the visual real estate of a browser window into multiple frames. Each frame has it's own contents and the content in one don't spill into the next.
+<br>
+An iframe, on the other hand, embeds a frame directly inline with the other elements of a webpage.
+<br>
+While both frames and iframes perform a similar function – embedding a resource into a webpage – they are fundamentally different.
+<br>
+</p><p>Frames are layout-defining elements.</p>
+<p>Iframes are a content-adding elements.</p>
+        <p><h3><b>The History and Future of Frames</b></h3></p>
+Frames have been deemed obsolete by the W3C in HTML5. The reasoning given for this is that frames create usability and accessibility issues. Let's consider each of these charges.
+
+    <p>The Problem with FramesM</p>
+Usability challenges: With the rise in popularity of mobile devices and tablets with small displays it's more important than ever that websites offer multiple views which change based on the size of the device viewport. While frames can be manipulated to provide a certain degree of responsiveness, they are simply not well-suited to creating responsive websites.
+    <br>
+Accessibility challenges: Screen readers and other assistive technologies have a very hard time understanding and communicating websites that use frames.
+In addition to the accessibility and usability issues created by frames, the trend within web design is to separate the content of a webpage from its presentation.
+<br>
+Content should be added and defined by markup such as HTML.
+Presentation should be manipulated with languages like CSS and JavaScript.
+Using frames is primarily about creating a specific look and layout, a presentation task that should really be handled with CSS.
+<br>
+<h3>The Future of Frames</h3>
+<p>While all modern browser offer support for frames today, the W3C has unequivocally stated that frames “are not to be used by Web developers” and that support for frames in web browsers is offered for historical purposes only.
+
+If you have a website that makes use of frames you should start planning a website migration away from frames. At some point in the future support for frames will be dropped by modern web browsers, and when that happens websites build with frames will become unusable.
+</p>
+    <h3>How to Create Frames</h3>
+<p>While frames should not be used for new websites, learning how to use frames can be beneficial for webmasters who are managing older websites.</p>
+
+    <h3>The Basic Idea Behind Frames</h3>
+<p>The basic concept behind frames is pretty simple:<br>
+
+Use the frameset element in place of the body element in an HTML document.<br>
+Use the frame element to create frames for the content of the web page.<br>
+Use the src attribute to identify the resource that should be loaded inside each frame.<br>
+Create a different file with the contents for each frame.<br>
+    </p>
+    
+    
+    < html><br>
+        < body><br>
+            < h1>Frame 1< / h1><br>
+            < p>Contents of Frame 1< / p><br>
+        < / body><br>
+    < / html><br>
+    <br>
+ 
+    <h3>Creating Vertical Columns</h3>
+<p>To create a set of four vertical columns, we need to use the frameset element with the cols attribute.
+
+The cols attribute is used to define the number and size of columns the frameset will contain. In our case, we have four files to display, so we need four frames. To create four frames we need to assign four comma-separated values to the cols attribute.
+
+To make things simple we're going to assign the value * to each of the frames, this will cause them to be automatically sized to fill the available space.
+
+Here's what our HTML markup looks like
+    </p>
+    
+    <p><!DOCTYPE html><br>
+    < html> <br>
+        < frameset cols="*,*,*,*"><br>
+            < frame src="../file_path/frame_1.html"><br>
+            
+            < frame src="frame_2.html"><br>
+            < frame src="frame_3.html"><br>
+            < frame src="frame_4.html"><br>
+            < / frameset > <br>
+        < / html ><br></p>
+<img src="framecolumns.jpg" width="600" height="400">
+                
+                <h3> Creating Horizontal Rows</h3>
+<p>Rows of frames can be created by using the rows attribute rather than the cols attribute as shown in the HTML below.    </p>
+
+<br>
+< html><br>
+< frameset rows="*,*,*,*"><br>
+    < frame src="frame_1.html"><br>
+    < frame src="frame_2.html"><br>
+    < frame src="frame_3.html"><br>
+    < frame src="frame_4.html"><br>
+< / frameset><br>
+< / html><br>
+            
+<img src="framerows.jpg" width="600" height="400">
+
+
+<h3>Example</h3>
+<p>Change the location of the first &lt;iframe&gt; element (index 0) in the current 
+window:</p>
+
+ window.frames[0].location = &quot;https://www.gp.com/jsref/&quot;;
+
+<h2>Definition and Usage</h2>
+<p>The frames property returns an array-like object, which represents all 
+&lt;iframe&gt; elements in the 
+current window.</p>
+<p>The &lt;iframe&gt; elements can be accessed by index numbers. The index starts at 
+0.</p>
+<p><b>Tip:</b> Use frames.length to find the number of frames.</p>
+<p><strong>Note:</strong> This property will also work for &lt;frame&gt; elements. 
+However, the &lt;frame&gt; element is not supported in HTML5.</p>
+<p>This property is read-only.</p>
+<hr>
+
+<h2>Browser Support</h2>
+<table class="browserref notranslate" border="1">
+  <tr>
+    <th style="width:20%;font-size:16px;text-align:left;">Property</th>
+    <th >Chrome</th>
+    <th >Internet Explorer / Edge</th>
+    <th >Firefox</th>
+    <th >Safari</th>
+    <th>Opera</th>                
+  </tr>
+  <tr>
+    <td>frames</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+    <td>Yes</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>Syntax</h2>
+<div class="w3-code w3-border notranslate"><div>
+window.frames</div></div>
+<h2>Technical Details</h2>
+<table border="1">
+<tr>
+ <th style="width:20%">Return Value:</th>
+  <td>Returns a reference to the Window object, representing all frames in the current 
+window</td>
+</tr>
+</table>
+
+<h3>Example</h3>
+<p>Loop through all frames on a page, and change the location of all frames to 
+&quot;w3schools.com&quot;:</p>
+
+ var frames = window.frames;<br>var i;<br><br>for (i = 0; i &lt; frames.length; i++) {<br>&nbsp;&nbsp;frames[i].location = &quot;https://www.gp.c&quot;;<br>
+ }
+    
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

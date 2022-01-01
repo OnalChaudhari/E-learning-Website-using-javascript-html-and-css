@@ -1,0 +1,124 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Cookies and Browser Data</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+
+
+<header>
+<div class="menu-bar">
+<center><h1>Browser</h1></center>
+</div>
+</header>
+<br>
+<p><center><b><h2> What is a Web Browser</h2></b></center></p><br>
+        <p>web browser is an application is a medium through which we can intaract with internet for uploading, downloading and reading information.</p>
+        <p>A web browser is a software application for accessing information on the World Wide Web. when web browser recives an request, it look for result on web server and display result to user. </p>
+        <p>following are web browsers</p>
+            <ol>
+                <li>Google chrome</li> <li>Firefox</li> <li>Safari</li> <li>Opera</li> <li>Microsoft Edge</li><li>Internet explorer</li>
+        </ol>
+        
+        <h2>Structure of a Browser</h2>
+        <p>Generally, a browser is referred to as an application that provides access to a Web server. <br>Depending on the implementation, browser capabilities and thus structures vary. A Web browser, at a minimum, consists of an Hypertext Markup Language (HTML) interpreter and HTTP client that is used to retrieve HTML Web pages. Besides this basic requirement, many browsers also support FTP, NNTP, e-mail (POP and SMTP clients), among other features, with an easy-to-manage graphical interface. illustrates a basic Web browser structure.</p>
+        <center> <img src="browserstructure.png" width="600" height="400"></center>
+        <p>As with many other Internet facilities, the Web uses a client/server processing model. The Web browser is the client component. Examples of Web browsers include Mozilla Firefox, Netscape Navigator, and Microsoft Internet Explorer Web browsers are responsible for formatting and displaying information, interacting with the user, and invoking external functions, such as Telnet, or external viewers for data types that Web browsers do not directly support. Web browsers have become the “universal client” for the GUI workstation environment.</p>
+
+        
+            <h2>What is the DOM?</h2>
+        <p>The Document Object Model (DOM) is a programming API for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated. In the DOM          specification, the term "document" is used in the broad sense - increasingly, XML is being used as a way of representing many different kinds of information that may be stored in diverse systems, and much of this would traditionally be seen as data rather than as documents. Nevertheless, XML presents this data as documents, and the DOM may be used to manage this data.
+
+            With the Document Object Model, programmers can create and build documents, navigate their structure, and add, modify, or delete elements and content. Anything found in an HTML or XML document can be accessed, changed, deleted, or added using the Document Object Model, with a few exceptions - in particular, the DOM interfaces for the internal subset and external subset have not yet been specified.</p>
+        
+        <p>The DOM is a W3C (World Wide Web Consortium) standard.</p>
+        <p></p>
+        <p>The DOM defines a standard for accessing documents:</p>
+        <p>The Document Object Model (DOM) is a platform and language-neutral 
+            interface that allows programs and scripts to dynamically access and update the 
+            content, structure, and style of a document.</p>
+        <p>The W3C DOM standard is separated into 3 different parts:</p>
+        <ul>
+            <li>Core DOM - standard model for all document types</li>
+            <li>XML DOM - standard model for XML documents</li>
+            <li>HTML DOM - standard model for HTML documents</li>
+        </ul>
+        <hr/>
+        
+        <p>The HTML DOM is a standard <strong>object</strong> model and <strong>
+            programming interface</strong> for HTML. It defines:</p>
+        <ul>
+        <li>The HTML elements as <b>objects</b>
+            <li>The <b>properties</b> of all HTML elements
+            <li>The <b>methods</b> to access all HTML elements</li>
+            <li>The <strong>events</strong> for all HTML elements</li>
+        </ul>
+        <p>In other words:<b> The HTML DOM is a standard for how to get, change, add, or delete HTML elements.</b></p>
+        
+        <p><b>With the object model, JavaScript gets all the power it needs to create dynamic HTML:<br></b></p>
+            <ul>
+                <li>  JavaScript can change all the HTML elements in the page<br></li>
+                <li> JavaScript can change all the HTML attributes in the page<br></li>
+                <li>  JavaScript can change all the CSS styles in the page<br></li>
+                <li> JavaScript can remove existing HTML elements and attributes<br></li>
+                <li> JavaScript can add new HTML elements and attributes<br></li>
+                <li>JavaScript can react to all existing HTML events in the page<br></li>
+                <li> JavaScript can create new HTML events in the page<br></li>
+        </ul>
+        <center> <img src="dom.png" width="600" height="400"></center>
+        
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

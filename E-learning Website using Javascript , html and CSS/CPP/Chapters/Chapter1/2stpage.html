@@ -1,0 +1,115 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Basics of JavaScript</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+
+
+<header>
+<div class="menu-bar">
+<center><h1>Objects & Variables </h1></center>
+</div>
+</header>
+<br>
+
+
+<p><b>Objects</b></p>
+<p>Objects, in JavaScript, is it’s most important data-type and forms the building blocks for modern JavaScript.</p>
+<p> These objects are quite different from JavaScript’s primitive data-types(Number, String, Boolean, null, undefined and symbol) in the sense that while these primitive data-types all store a single value each (depending on their types).</p>
+<p>Objects are more complex and each object may contain any combination of these primitive data-types as well as reference data-types.</p>
+<p>An object, is a reference data type. Variables that are assigned a reference value are given a reference or a pointer to that value.</p>
+<p>That reference or pointer points to the location in memory where the object is stored.</p>
+<p>The variables don’t actually store the value.</p>
+<p><b>Javascript Datatypes</b></p>
+<p>JavaScript allows you to work with three primitive data types:</p>
+<ul>
+<li>Numbers, e.g., 123, 120.50 etc.</li>
+<li>Strings of text, e.g. "This text string" etc</li>
+<li>Boolean, e.g. true or false.</li>
+</ul>
+
+<p>JavaScript also defines two trivial data types, null and undefined, each of which defines only a single value.</p> 
+<p>In addition to these primitive data types, JavaScript supports a composite data type known as object.</p>
+
+<p><b>Variables</b></p>
+<p>Variables are declared with the var keyword.</p>
+<p>Storing a value in a variable is called variable initialization. 
+You can do variable initialization at the time of variable creation or at a later point in time when you need that variable.</p>
+<p>JavaScript is untyped language.</p> 
+<p>This means that a JavaScript variable can hold a value of any data type. Unlike many other languages, you don't have to tell JavaScript during variable declaration what type of value the variable will hold.</p>
+<p> The value type of a variable can change during the execution of a program and JavaScript takes care of it automatically.</p>
+<p><b>Variable Scope</b></p>
+<p>The scope of a variable is the region of your program in which it is defined.</p>
+<p>JavaScript variables have only two scopes.</p>
+<p><b>•Global Variables:</b></p>
+<p>A global variable has global scope which means it can be defined anywhere in your JavaScript code.</p>
+<p><b>•Local Variables:</b></p>
+<p> A local variable will be visible only within a function where it is defined. Function parameters are always local to that function.</p>
+<p><b>Example:</b></p>
+<xmp>
+var test = "I'm global";
+
+function testScope() {
+  var test = "I'm local";
+
+  console.log (test);     
+}
+
+testScope();           // output: I'm local
+
+console.log(test);     // output: I'm global
+</xmp>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

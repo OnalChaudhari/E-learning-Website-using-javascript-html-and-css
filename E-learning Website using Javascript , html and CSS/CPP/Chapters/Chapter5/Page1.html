@@ -1,0 +1,336 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Regular Expression and Frames</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+
+
+<header>
+<div class="menu-bar">
+<center><h1>JavaScript RegExp </h1></center>
+</div>
+</header>
+<br>
+             <p>Every programing language implements regular expressionthere are small diffrance between each implementation., but the general concept apply almost everywhere. The language of regular expression consist of <b>Quntifiers, Meta Characters </b>and <b>Character classes.</b> </p>
+<h2>RegExp Object</h2>
+<p>A regular expression is an object that describes a pattern of characters.<br></p>
+<p>Regular expressions are used to perform pattern-matching and 
+&quot;search-and-replace&quot; functions on text.<br><br>
+Regular expression is a series of  characters between forword shlashes "/......./"<br><br>
+By using regular expression we can: <br>
+             1. Search text in string.<br>
+             2. Replace Substring in string.<br>
+             3. extract information fron string.<br></p>             
+
+<h2>Syntax</h2>
+
+ /<em>pattern</em>/<em>modifiers</em>;
+
+
+
+<h3>Example</h3>
+             
+ var pattern = /gp/i
+
+<p>Example explained:</p>
+<ul>
+  <li><strong>/gp/i</strong>&nbsp; is a regular expression.</li>
+  <li><strong>gp</strong>&nbsp; is a pattern (to be used in a search).</li>
+  <li><strong>i</strong>&nbsp; is a modifier (modifies the search to be case-insensitive).</li>
+</ul>
+
+
+
+<h2>Modifiers</h2>
+<p>Modifiers are used to perform case-insensitive and global searches:</p>
+<table border="1" >
+  <tr>
+    <th style="width:22%">Modifier</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a>g</a></td>
+    <td>Perform a global match (find all matches rather than stopping after the first match)</td>
+  </tr>
+  <tr>
+    <td><a>i</a></td>
+    <td>Perform case-insensitive matching</td>
+  </tr>
+  <tr>
+    <td><a >m</a></td>
+    <td>Perform multiline matching</td>
+  </tr>
+</table>
+
+<h2>Brackets</h2>
+<p>Brackets are used to find a range of characters:</p>
+<table border="1">
+  <tr>
+    <th style="width:22%">Expression</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a>[abc]</a></td>
+    <td>Find any character between the brackets</td>
+  </tr>
+  <tr>
+    <td><a >[^abc]</a></td>
+    <td>Find any character NOT between the brackets</td>
+  </tr>
+  <tr>
+    <td><a >[0-9]</a></td>
+    <td>Find any character between the brackets (any digit)</td>
+  </tr>
+    <tr>
+    <td><a >[^0-9]</a></td>
+    <td>Find any character NOT between the brackets (any non-digit)</td>
+  </tr>
+    <tr>
+    <td><a >(x|y)</a></td>
+    <td>Find any of the alternatives specified</td>
+  </tr>
+</table>
+<hr>
+
+<h2>Metacharacters</h2>
+<p>Metacharacters are characters with a special meaning:</p>
+<table border="1">
+  <tr>
+    <th style="width:22%">Metacharacter</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>.</td>
+    <td>Find a single character, except newline or line terminator</td>
+  </tr>
+  <tr>
+    <td><a>\w</a></td>
+    <td>Find a word character</td>
+  </tr>
+  <tr>
+    <td><a >\W</a></td>
+    <td>Find a non-word character</td>
+  </tr>
+  <tr>
+    <td><a >\d</a></td>
+    <td>Find a digit</td>
+  </tr>
+  <tr>
+    <td><a >\D</a></td>
+    <td>Find a non-digit character</td>
+  </tr>
+  <tr>
+    <td><a >\s</a></td>
+    <td>Find a whitespace character</td>
+  </tr>
+  <tr>
+    <td><a >\S</a></td>
+    <td>Find a non-whitespace character</td>
+  </tr>
+  <tr>
+    <td><a >\b</a></td>
+    <td>Find a match at the beginning/end of a word, beginning like this: \bHI, 
+    end like this: HI\b</td>
+  </tr>
+  <tr>
+    <td><a >\B</a></td>
+    <td>Find a match, but not at the beginning/end of a word</td>
+  </tr>
+  <tr>
+    <td><a >\0</a></td>
+    <td>Find a NUL character</td>
+  </tr>
+  <tr>
+    <td><a >\n</a></td>
+    <td>Find a new line character</td>
+  </tr>
+  <tr>
+    <td><a >\f</a></td>
+    <td>Find a form feed character</td>
+  </tr>
+  <tr>
+    <td><a >\r</a></td>
+    <td>Find a carriage return character</td>
+  </tr>
+  <tr>
+    <td><a >\t</a></td>
+    <td>Find a tab character</td>
+  </tr>
+  <tr>
+    <td><a >\v</a></td>
+    <td>Find a vertical tab character</td>
+  </tr>
+  <tr>
+    <td><a >\xxx</a></td>
+    <td>Find the character specified by an octal number xxx</td>
+  </tr>
+  <tr>
+    <td><a >\xdd</a></td>
+    <td>Find the character specified by a hexadecimal number dd</td>
+  </tr>
+  <tr>
+    <td><a >\udddd</a></td>
+    <td>Find the Unicode character specified by a hexadecimal number dddd</td>
+  </tr>
+</table>
+
+<h2>Quantifiers</h2>
+<table border="1">
+  <tr>
+    <th style="width:22%">Quantifier</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a >n+</a></td>
+    <td>Matches any string that contains at least one <em>n</em></td>
+  </tr>
+  <tr>
+    <td><a >n*</a></td>
+    <td>Matches any string that contains zero or more occurrences of <em>n</em></td>
+  </tr>
+  <tr>
+    <td><a >n?</a></td>
+    <td>Matches any string that contains zero or one occurrences of <em>n</em></td>
+  </tr>
+  <tr>
+    <td><a >n{X}</a></td>
+    <td>Matches any string that contains a sequence of <i>X</i> <i>n</i>'s</td>
+  </tr>
+  <tr>
+    <td><a >n{X,Y}</a></td>
+    <td>Matches any string that contains a sequence of X to Y <i>n</i>'s</td>
+  </tr>
+  <tr>
+    <td><a >n{X,}</a></td>
+    <td>Matches any string that contains a sequence of at least X <i>n</i>'s</td>
+  </tr>
+  <tr>
+    <td><a >n$</a></td>
+    <td>Matches any string with <em>n</em> at the end of it</td>
+  </tr>
+  <tr>
+    <td><a >^n</a></td>
+    <td>Matches any string with <em>n</em> at the beginning of it</td>
+  </tr>
+  <tr>
+    <td><a >?=n</a></td>
+    <td>Matches any string that is followed by a specific string <em>n</em></td>
+  </tr>
+  <tr>
+    <td><a >?!n</a></td>
+    <td>Matches any string that is not followed by a specific string <em>n</em></td>
+  </tr>
+</table>
+
+<h2>RegExp Object Properties</h2>
+<table border="1">
+  <tr>
+    <th style="width:22%">Property</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a >constructor</a></td>
+    <td>Returns the function that created the RegExp object's prototype</td>
+  </tr>
+  <tr>
+    <td><a >global</a></td>
+    <td>Checks whether the &quot;g&quot; modifier is set</td>
+  </tr>
+  <tr>
+    <td><a >ignoreCase</a></td>
+    <td>Checks whether the &quot;i&quot; modifier is set</td>
+  </tr>
+  <tr>
+    <td><a >lastIndex</a></td>
+    <td>Specifies the index at which to start the next match</td>
+  </tr>
+  <tr>
+    <td><a >multiline</a></td>
+    <td>Checks whether the &quot;m&quot; modifier is set</td>
+  </tr>
+  <tr>
+    <td><a >source</a></td>
+    <td>Returns the text of the RegExp pattern</td>
+  </tr>
+</table>
+
+<h2>RegExp Object Methods</h2>
+<table border="1">
+  <tr>
+    <th style="width:22%">Method</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><a >compile()</a></td>
+    <td><span class="deprecated">Deprecated in version 1.5.</span> Compiles a regular expression</td>
+  </tr>
+  <tr>
+    <td><a >exec()</a></td>
+    <td>Tests for a match in a string. Returns the first match</td>
+  </tr>
+  <tr>
+    <td><a >test()</a></td>
+    <td>Tests for a match in a string. Returns true or false</td>
+  </tr>
+   <tr>
+    <td><a >toString()</a></td>
+    <td>Returns the string value of the regular expression</td>
+  </tr>
+</table>
+
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>

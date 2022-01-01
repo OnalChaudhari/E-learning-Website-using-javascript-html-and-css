@@ -1,0 +1,258 @@
+<html>
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+<div style="background-color:black;color:white;padding:30px">Arrays Function & Strings</div>
+<div style="background-color:lightgrey;padding:30px 30px 40px">
+
+
+
+<header>
+<div class="menu-bar">
+<center><h2>Function </h2></center>
+</div>
+</header>
+<br>
+<h3>What is Function in JavaScript? </h3>
+<p>Functions are building blocks of any programming langauge.Function is a block of statements that performs certain task.</p>
+<p>Functions are of two types:</p>
+<p><b>Built-in functions</b> are the functions that are already defined in the javacsript.Examples are write(),alert(),prompt(),etc.</p>
+<p><b>User-defined Functions</b> are defined by a user.Sometimes,this functions are simple and sometimes they are quite complex.</p>
+<h3>How to Create a Function in JavaScript </h3>
+<p>1.Use the keyword function followed by the name of the function.</p>
+<p>2.After the function name, open and close parentheses.</p>
+<p>3.After parenthesis, open and close curly braces.</p>
+<p>4.Within curly braces, write your lines of code.</p>
+<p><b>Syntax</b></p>
+<xmp>
+function functionname()
+{
+   lines of code to be executed
+}
+</xmp>
+<p><b>Example</b></p>
+<xmp>
+<html>
+<head>
+	<title>Functions!!!</title>
+	<script type="text/javascript">
+      function myFunction()
+      {
+      	document.write("This is a simple function.<br />");
+      }
+		myFunction();
+	</script>
+</head>
+<body>
+</body>
+</html>
+</xmp>
+
+<h3><b>Functions Used as Variable Values</b></h3>
+<p>Functions can be used the same way as you use variables, in all types of formulas, assignments, and calculations.</p>
+<p><b>Example</b></p>
+<p>Instead of using a variable to store the return value of a function:</p>
+<p>var x = toCelsius(77);</p>
+<p>var text = "The temperature is " + x + " Celsius";</p>
+<p>You can use the function directly, as a variable value:</p>
+
+<p>var text = "The temperature is " + toCelsius(77) + " Celsius";</p>
+<h2><b>Scope of Variable</b></h2>
+<h3><b>Local Variables</b></h3>
+<p> Since local variables are defined inside the function so variables with the same name can be used in different functions</p>
+<xmp>
+<html> 
+  
+<body> 
+    <center> 
+        <p>Outside myfunction() petName is not defined.</p> 
+  
+        <p id="Geeks"></p> 
+  
+        <p id="geeks"></p> 
+  
+        <script> 
+            myfunction(); 
+  
+            function myfunction() { 
+                var petName = "Sizzer"; // local variabl 
+                document.getElementById("Geeks").innerHTML = 
+                    typeof petName + " " + petName; 
+            } 
+  
+            document.getElementById("geeks").innerHTML = 
+                typeof petName; 
+        </script> 
+  </center> 
+  
+</body> 
+  
+</html> 
+</xmp>
+<h3><b>Global Variables</b></h3>
+<p>Since global variables are defined outside there function so variables with the same name can not be used in different functions. All the scripts and functions on a web page can access it.</p>
+<xmp>
+<html> 
+  
+<body> 
+    <center> 
+        <p>A GLOBAL variable can be accessed from  
+                            any script or function.</p> 
+  
+        <p id="geeks"></p> 
+        <p id="Geeks"></p> 
+        <script> 
+            var petName = "Rocky";//global variable 
+            myFunction(); 
+  
+            function myFunction() { 
+                document.getElementById("geeks").innerHTML = 
+                  typeof petName + "- " + "My pet name is " + petName; 
+            } 
+  
+            document.getElementById("Geeks").innerHTML = 
+               typeof petName + "- " + "My pet name is " + petName; 
+        </script> 
+  </center> 
+  
+</body> 
+  
+</html>
+</xmp>
+<br>
+ <h2><b>Calling a Function</b></h2>
+<br>
+<h3><b>Calling a Function with Arguments </b></h3>
+<p>You can create functions with arguments as well. Arguments should be specified within parenthesis</p>
+<p><b>Syntax</b></p>
+<xmp>
+function functionname(arg1, arg2)
+{
+  lines of code to be executed
+}
+</xmp>
+<p><b>Example</b></p>
+<xmp>
+<html>
+<head>
+	<script type="text/javascript">
+		var count = 0;
+		function countVowels(name)
+		{
+			for (var i=0;i<name.length;i++)
+			{
+              if(name[i] == "a" || name[i] == "e" || name[i] == "i" || name[i] == "o" || name[i] == "u")
+              count = count + 1;
+			}
+		document.write("Hello " + name + "!!! Your name has " + count + " vowels.");
+		}
+   	 	var myName = prompt("Please enter your name");
+    	countVowels(myName);
+	</script>
+</head>
+<body>
+</body>
+</html> 
+</xmp>
+<h3><b>Calling a Function without Arguments</b></h3>
+<p><b>Example</b></p>
+<xmp>
+<html>
+<head>
+<script type="text/javascript">
+function myfunction()
+{
+alert("HELLO")
+}
+</script>
+</head>
+<body>
+<form>
+<input type="button" onclick="myfunction()" value="Call function">
+</form>
+</body>
+</html>
+</xmp>
+<h2><b>JavaScript Return Value</b></h2>
+<p>You can also create JS functions that return values. Inside the function, you need to use the keyword return followed by the value to be returned.</p>
+<p><b>Syntax</b></p>
+<xmp>
+function functionname(arg1, arg2)
+{
+  lines of code to be executed
+  return val1;
+}
+</xmp>
+<p><b>Example</b></p>
+<xmp>
+<html>
+<head>
+	<script type="text/javascript">
+		function returnSum(first, second)
+        {
+          var sum = first + second;
+          return sum;
+        }
+      var firstNo = 78;
+      var secondNo = 22;
+      document.write(firstNo + " + " + secondNo + " = " + returnSum(firstNo,secondNo));
+	</script>
+</head>
+<body>
+</body>
+</html>
+</xmp>
+
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>
